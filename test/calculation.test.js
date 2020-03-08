@@ -1,10 +1,11 @@
-const sum = require('../src/calculation');
+const {sqrt} = require('../src/calculation');
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
-    });
+test("Square Root of 4 is 2", () => {
+    expect(sqrt(4)).toBe(2);
+});
 
-test('adds 3 + 2 to equal 5', () => {
-    expect(sum(3, 2)).toBe(5);
+test("Square Root of 2 is 1.41421..", () =>{
+    expect(sqrt(2)).toBeGreaterThan(1.41421);
+    expect(sqrt(2)).toBeLessThan(1.42);
 });
 
