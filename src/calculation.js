@@ -4,11 +4,23 @@
  * @for MathJS
  */
 
+
+ /**
+  * Simple method for getting positive representation of a number.
+  * 
+  * @param {Number} val the value to represent as a positive
+  * @return {Number} the positive representaton of given number
+  */
+function abs(val)
+{
+    return (val < 0 ? -val : val);
+}
+
  /**
   * Newtonian Method for calculating square root. 
   * 
-  * @param {number} val the value to square root
-  * @return {number} the (estimate) square root of given number
+  * @param {Number} val the value to square root
+  * @return {Number} the (estimate) square root of given number
   * 
   * @computation O(M(n))
   */
@@ -30,5 +42,6 @@ function sqrt(val) {
 }
 
  module.exports = {
+    abs: abs,
     sqrt: sqrt
  };
