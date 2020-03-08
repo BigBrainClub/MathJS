@@ -1,0 +1,31 @@
+{
+  "name": "mathjs",
+  "version": "1.0.0",
+  "description": "JavaScript math library used to develop an understanding of commonly used math functions as well as unit testing and continuous integration.",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigBrainClub/MathJS.git"
+  },
+  "keywords": [
+    "math",
+    "test",
+    "testing",
+    "integration"
+  ],
+  "author": "Parker Staszkiewicz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BigBrainClub/MathJS/issues"
+  },
+  "homepage": "https://github.com/BigBrainClub/MathJS#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
