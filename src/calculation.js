@@ -11,9 +11,29 @@
   * @param {Number} val the value to represent as a positive
   * @return {Number} the positive representaton of given number
   */
-function abs(val)
-{
+function abs(val) {
     return (val < 0 ? -val : val);
+}
+
+/**
+ * Method to evaluate base^exp.
+ * 
+ * @param {Number} base 
+ * @param {Number} exp 
+ */
+function pow(base, exp) {
+    if (Math.floor(exp) == 0) {
+        return 1;
+    }
+
+    let result = pow(base, exp / 2);
+
+    if (exp & 1) {
+        return base * result * result;
+    }
+    else {
+        return result * result;
+    }
 }
 
  /**
@@ -30,8 +50,7 @@ function sqrt(val) {
     for (let i = 0; i < 10; i++) {
         z = x - (x*x - val) / (2*x); 
 
-        if (z == x)
-        {
+        if (z == x) {
             return z;
         }
 
@@ -43,5 +62,6 @@ function sqrt(val) {
 
  module.exports = {
     abs: abs,
+    pow: pow,
     sqrt: sqrt
  };
