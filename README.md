@@ -33,6 +33,11 @@ The "test" command has been pre-defined for the project in the package.json file
 ## Continuous Integration
 The purpose of continuous integration is to ensure that the project remains in a clean state during all iterations.  This is accomplished by running continuous tests on the repository remote origin (Github, in the case of this project).
 
-### Github
+### GitHub
+GitHub repositories can mark branches as "protected". These branches cannot be directly committed to, instead requiring a pull request to be accepted.  In addition to requiring request approval, branches can also require status checks before allowing a merge. If the status check returns negative, then the pull request cannot be merged into the protected branch.
+
+![Testing CI](/misc/images/Annotation_CI.png)
+![Testing CI Pass](/misc/images/Annotation_CI_2.png)
 
 ### CircleCI
+[CircleCI](https://circleci.com/) is a hosting service which runs continuous integration tests on repositories. By linking CircleCI to GitHub, the node package tests can be automated. The configuration for CircleCI is in the /.circleci/config.yml file. CircleCI is set as the status checker for the protected branch of the repository.
