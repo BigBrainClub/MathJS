@@ -1,15 +1,15 @@
 /**
- * @module Math
- * @submodule Calculation
+ * @module Calculation
  * @for MathJS
  */
-
 
  /**
   * Simple method for getting positive representation of a number.
   * 
   * @param {Number} val the value to represent as a positive
   * @return {Number} the positive representaton of given number
+  * 
+  * @computation O(1)
   */
 function abs(val) {
     return (val < 0 ? -val : val);
@@ -18,8 +18,11 @@ function abs(val) {
 /**
  * Method to evaluate base^exp.
  * 
- * @param {Number} base 
- * @param {Number} exp 
+ * @param {Number} base base value
+ * @param {Number} exp exponent value
+ * @return {Number} the result y of y = b^x
+ * 
+ * @computation O(log(n)) where n = exp
  */
 function pow(base, exp) {
     if (Math.floor(exp) == 0) {
